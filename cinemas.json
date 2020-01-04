@@ -1,0 +1,226 @@
+[
+  {
+    "place_id": "00001e51-c05d-343d-a500-65f40000a853",
+    "list_id": 43091,
+    "created_ts": "2012-03-06T12:16:23",
+    "modified_ts": "2014-02-24T12:32:25",
+    "name": "Vue North Finchley",
+    "sort_name": "Vue North Finchley",
+    "address": "Great North Leisure Park, Chaplin Square",
+    "town": "London",
+    "postal_code": "N12 0GL",
+    "country_code": "GB",
+    "lat": 51.60449,
+    "lng": -0.17475,
+    "website": "http://www.myvue.com/",
+    "tags": ["cinemas"],
+    "properties": {},
+    "_distance": 0.82
+  },
+  {
+    "place_id": "00101822-025d-343d-3919-21050000b369",
+    "list_id": 45929,
+    "created_ts": "2012-07-27T12:58:52",
+    "modified_ts": "2016-04-11T08:15:22",
+    "name": "Phoenix Cinema East Finchley",
+    "sort_name": "Phoenix Cinema East Finchley",
+    "address": "52 High Road",
+    "town": "East Finchley",
+    "postal_code": "N2 9PJ",
+    "country_code": "GB",
+    "lat": 51.58857,
+    "lng": -0.16408,
+    "website": "http://www.phoenixcinema.co.uk",
+    "tags": ["cinemas", "independent cinemas"],
+    "descriptions": [
+      {
+        "type": "default",
+        "description": "Currently run by a charitable trust, Phoenix Cinema sits beneath an unusual vaulted ceiling dating back to 1910. It screens a mix of independent, mainstream and foreign films with actors and directors often introducing their work."
+      }
+    ],
+    "properties": {
+      "place.facilities.parking": false,
+      "place.facilities.toilets": true,
+      "place.facilities.free-wifi": true,
+      "place.facilities.toilets.disabled": true,
+      "place.facilities.wheelchair-access": true
+    },
+    "_distance": 1.55
+  },
+  {
+    "place_id": "00003951-c05d-343d-e300-65f40000a805",
+    "list_id": 43013,
+    "created_ts": "2012-03-06T12:16:23",
+    "modified_ts": "2018-04-12T08:08:53",
+    "name": "Everyman Muswell Hill",
+    "sort_name": "Everyman Muswell Hill",
+    "address": "Fortis Green Road",
+    "town": "London",
+    "postal_code": "N10 3HP",
+    "country_code": "GB",
+    "lat": 51.58976,
+    "lng": -0.14611,
+    "website": "http://www.everymancinema.com/venues/muswell-hill/whats-on/",
+    "tags": ["cinemas"],
+    "descriptions": [
+      {
+        "type": "default",
+        "description": "\nMuswell Hill's handsome cinema dates from 1936, and is a grade II listed building; its interior is the most elaborate of any original Odeon cinema to survive. \n\nIt was subdivided into three screens in 1974, with the result that in the main auditorium the seats are all in the balcony. \n\nIt is now a five screen Everyman cinema with 469 seats.\n\nThe two smaller screens, 2 & 3, have wheelchair spaces but screen 1 has no disabled access. There are disabled toilets and parking spaces, but no hearing loops. The cinema has its own car park at the rear of the building.\n\nThe cinema is served by bus stops for the 102, 234, 603 routes, with the 43 and 134 around the corner on Muswell Hill Road. The nearest Tubes are East Finchley, a little over a mile to the west (follow Fortis Green), or Highgate to the south, down Muswell Hill Road."
+      }
+    ],
+    "properties": {},
+    "_distance": 2.19
+  },
+  {
+    "place_id": "0000b551-c05d-343d-7200-65f40000a7cd",
+    "list_id": 42957,
+    "created_ts": "2012-03-06T12:16:23",
+    "modified_ts": "2019-03-28T14:31:57",
+    "name": "Everyman Barnet",
+    "sort_name": "Everyman Barnet",
+    "address": "Great North Road",
+    "town": "Barnet",
+    "postal_code": "EN5 1AB",
+    "country_code": "GB",
+    "lat": 51.64646,
+    "lng": -0.1878,
+    "website": "http://www.everymancinema.com/venues/barnet/whats-on/",
+    "tags": ["cinemas"],
+    "descriptions": [
+      {
+        "type": "default",
+        "description": "This Everyman opened as a cinema in May 1935 and continues to serve the north London community of Barnet. It was formerly an Odeon.\n\nIt has 5 screens and a total of 429 seats.\n\nThis is a cinema of architectural importance and was awarded a Grade II listing in 1989. The architect was Edgar Simmons."
+      }
+    ],
+    "properties": {},
+    "_distance": 3.11
+  },
+  {
+    "place_id": "9654b830-ef42-bb9a-9265-93350000e5d0",
+    "list_id": 58832,
+    "created_ts": "2014-03-31T11:48:57",
+    "modified_ts": "2018-04-12T07:49:58",
+    "name": "Everyman Hampstead",
+    "sort_name": "Everyman Hampstead",
+    "address": "5 Holly Bush Vale",
+    "town": "London",
+    "postal_code": "NW3 6TX",
+    "country_code": "GB",
+    "lat": 51.55652,
+    "lng": -0.17906,
+    "website": "http://www.everymancinema.com/venues/hampstead/venue-details/",
+    "tags": ["cinemas"],
+    "links": [
+      {
+        "url": "https://twitter.com/everymancinema",
+        "title": "@everymancinema"
+      },
+      {
+        "url": "https://www.facebook.com/EverymanCinemas",
+        "title": "Everyman Cinemas on Facebook"
+      }
+    ],
+    "descriptions": [
+      {
+        "type": "default",
+        "description": "A two screen cinema Everyman with armchairs and sofas and a total of 192 seats. There is also a private screening room which seats 15 adults or 17 children.\n\nNearest London Underground is Hampstead and there are a limited number of pay and display parking spaces in the surrounding area."
+      }
+    ],
+    "properties": {
+      "phone.info": "0871 906 9060"
+    },
+    "_distance": 3.18
+  },
+  {
+    "place_id": "b654b817-a742-bb9a-85c3-dc350000ee4d",
+    "list_id": 61005,
+    "created_ts": "2014-07-21T16:14:16",
+    "modified_ts": "2017-09-18T09:52:09",
+    "name": "Crouch End Picturehouse",
+    "sort_name": "Crouch End Picturehouse",
+    "address": "165 Tottenham Lane\nCrouch End",
+    "town": "London",
+    "postal_code": "N8 9BY",
+    "country_code": "GB",
+    "lat": 51.58157,
+    "lng": -0.12086,
+    "website": "https://www.picturehouses.com/cinema/Crouch_End_Picturehouse",
+    "tags": ["cinemas"],
+    "links": [
+      {
+        "url": "https://www.facebook.com/CrouchEndPicturehouse",
+        "title": "Crouch End Picturehouse on Facebook"
+      },
+      {
+        "url": "https://twitter.com/CrouchEndPH",
+        "title": "@CrouchEndPH"
+      }
+    ],
+    "descriptions": [],
+    "properties": {
+      "phone.info": "0871 902 5747"
+    },
+    "_distance": 3.41
+  },
+  {
+    "place_id": "e654b830-7d42-bb9a-c877-91450000f137",
+    "list_id": 61751,
+    "created_ts": "2014-09-17T11:59:08",
+    "modified_ts": "2017-08-15T09:05:10",
+    "name": "ArtHouse Crouch End",
+    "sort_name": "ArtHouse Crouch End",
+    "address": "159A Tottenham Lane",
+    "town": "London",
+    "postal_code": "N8 9BT",
+    "country_code": "GB",
+    "lat": 51.5818,
+    "lng": -0.11996,
+    "website": "http://www.arthousecrouchend.co.uk",
+    "tags": ["cinema", "cinemas"],
+    "descriptions": [],
+    "properties": {
+      "phone.info": "020 8245 3099"
+    },
+    "_distance": 3.44
+  },
+  {
+    "place_id": "a654b815-e542-bb9a-603b-91450000f169",
+    "list_id": 61801,
+    "created_ts": "2014-09-17T16:12:54",
+    "modified_ts": "2016-05-09T10:07:42",
+    "name": "JW3",
+    "sort_name": "JW3",
+    "address": "Finchley Road",
+    "town": "London",
+    "postal_code": "NW3 6ET",
+    "country_code": "GB",
+    "lat": 51.55096,
+    "lng": -0.1839,
+    "website": "http://www.jw3.org.uk",
+    "tags": ["cinema", "cinemas", "community centre"],
+    "descriptions": [],
+    "properties": {
+      "phone.info": "020 7433 8988",
+      "place.facilities.parking": true
+    },
+    "_distance": 3.52
+  },
+  {
+    "place_id": "00006f51-c05d-343d-2600-65f40000a868",
+    "list_id": 43112,
+    "created_ts": "2012-03-06T12:16:23",
+    "modified_ts": "2014-07-22T08:39:51",
+    "name": "Vue Wood Green",
+    "sort_name": "Vue Wood Green",
+    "address": "Hollywood Green, 180 High Road",
+    "town": "Wood Green",
+    "postal_code": "N22 6EJ",
+    "country_code": "GB",
+    "lat": 51.59627,
+    "lng": -0.1101,
+    "website": "http://www.myvue.com/",
+    "tags": ["cinemas"],
+    "properties": {},
+    "_distance": 3.59
+  }
+]
