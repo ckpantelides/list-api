@@ -96,7 +96,7 @@ app.get(
           });
         }
         filmTimes = filmTimes.concat(body);
-        req.app.locals.data = filmTimes;
+        req.app.locals.data = JSON.stringify(filmTimes);
         next();
         // Testing - writing results to JSON:
         //  let data = JSON.stringify(filmTimes);
