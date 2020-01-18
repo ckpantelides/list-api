@@ -211,31 +211,38 @@ app.get("/filmtimesapp", function(req, res, next) {
     for (let i = 0; i < mockFilmData.length; i++) {
       (trimmedMockData0[i] = {
         name: mockFilmData[i].name,
-        times: mockFilmData[i].schedules[0].performances
+        times: mockFilmData[i].schedules[0].performances,
+        description: mockFilmData[i].descriptions[0].description
       }),
         (trimmedMockData1[i] = {
           name: mockFilmData[i].name,
-          times: mockFilmData[i].schedules[0].performances
+          times: mockFilmData[i].schedules[0].performances,
+          description: mockFilmData[i].descriptions[0].description
         }),
         (trimmedMockData2[i] = {
           name: mockFilmData[i].name,
-          times: mockFilmData[i].schedules[0].performances
+          times: mockFilmData[i].schedules[0].performances,
+          description: mockFilmData[i].descriptions[0].description
         }),
         (trimmedMockData3[i] = {
           name: mockFilmData[i].name,
-          times: mockFilmData[i].schedules[0].performances
+          times: mockFilmData[i].schedules[0].performances,
+          description: mockFilmData[i].descriptions[0].description
         }),
         (trimmedMockData4[i] = {
           name: mockFilmData[i].name,
-          times: mockFilmData[i].schedules[0].performances
+          times: mockFilmData[i].schedules[0].performances,
+          description: mockFilmData[i].descriptions[0].description
         }),
         (trimmedMockData5[i] = {
           name: mockFilmData[i].name,
-          times: mockFilmData[i].schedules[0].performances
+          times: mockFilmData[i].schedules[0].performances,
+          description: mockFilmData[i].descriptions[0].description
         }),
         (trimmedMockData6[i] = {
           name: mockFilmData[i].name,
-          times: mockFilmData[i].schedules[0].performances
+          times: mockFilmData[i].schedules[0].performances,
+          description: mockFilmData[i].descriptions[0].description
         });
     }
 
