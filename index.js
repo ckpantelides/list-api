@@ -89,7 +89,7 @@ app.get(
         }
 
         body = JSON.parse(body);
-        if (body.length < 0) {
+        if (body.length > 0) {
           body = body.filter(e => {
             return e.tags.includes("film");
           });
@@ -183,7 +183,7 @@ app.get("/filmtimesapp", function(req, res, next) {
     }
 
     body = JSON.parse(body);
-    if (body.length < 0) {
+    if (body.length > 0) {
       body = body.filter(e => {
         return e.tags.includes("film");
       });
