@@ -21,13 +21,11 @@ server.listen(port);
 /*
 const mockCinemaData = require("./cinemas.json");
 const mockFilmData = require("./film-times.json");
-
 let cinemas = mockCinemaData;
 let filmTimes = mockFilmData;
 */
 
-// Cinema search route
-
+// Cinemas by latitude and longitude
 // fetch cinemas within 5 miles of lat & lon
 app.get(
   "/cinemas",
@@ -195,8 +193,8 @@ app.get("/filmtimesapp", function(req, res, next) {
     //  const mockFilmData = require("./film-times.json");
     const mockFilmData = filmTimes.concat(body);
 
-    // The film data was being unexpectedly mutated by the later functions that filter the
-    // film perfomances by date. I therefore created separate copies of the film data
+    // The avoid the film data being mutated each time the performances are filter by date
+    // I've created separate copies for each day of the week
     let trimmedMockData0 = [];
     let trimmedMockData1 = [];
     let trimmedMockData2 = [];
@@ -208,42 +206,44 @@ app.get("/filmtimesapp", function(req, res, next) {
     // This creates an object trimming the unnecessary film data, leaving just the name
     // and the performances. I felt this was necessary as the original data array is complex and has
     // many nested properties
-    for (let i = 0; i < mockFilmData.length; i++) {
-      (trimmedMockData0[i] = {
-        name: mockFilmData[i].name,
-        times: mockFilmData[i].schedules[0].performances,
-        description: mockFilmData[i].descriptions[0].description
-      }),
-        (trimmedMockData1[i] = {
+    if (mockFilmData.length > 0 && mockFilmData !== undefined) {
+      for (let i = 0; i < mockFilmData.length; i++) {
+        (trimmedMockData0[i] = {
           name: mockFilmData[i].name,
           times: mockFilmData[i].schedules[0].performances,
           description: mockFilmData[i].descriptions[0].description
         }),
-        (trimmedMockData2[i] = {
-          name: mockFilmData[i].name,
-          times: mockFilmData[i].schedules[0].performances,
-          description: mockFilmData[i].descriptions[0].description
-        }),
-        (trimmedMockData3[i] = {
-          name: mockFilmData[i].name,
-          times: mockFilmData[i].schedules[0].performances,
-          description: mockFilmData[i].descriptions[0].description
-        }),
-        (trimmedMockData4[i] = {
-          name: mockFilmData[i].name,
-          times: mockFilmData[i].schedules[0].performances,
-          description: mockFilmData[i].descriptions[0].description
-        }),
-        (trimmedMockData5[i] = {
-          name: mockFilmData[i].name,
-          times: mockFilmData[i].schedules[0].performances,
-          description: mockFilmData[i].descriptions[0].description
-        }),
-        (trimmedMockData6[i] = {
-          name: mockFilmData[i].name,
-          times: mockFilmData[i].schedules[0].performances,
-          description: mockFilmData[i].descriptions[0].description
-        });
+          (trimmedMockData1[i] = {
+            name: mockFilmData[i].name,
+            times: mockFilmData[i].schedules[0].performances,
+            description: mockFilmData[i].descriptions[0].description
+          }),
+          (trimmedMockData2[i] = {
+            name: mockFilmData[i].name,
+            times: mockFilmData[i].schedules[0].performances,
+            description: mockFilmData[i].descriptions[0].description
+          }),
+          (trimmedMockData3[i] = {
+            name: mockFilmData[i].name,
+            times: mockFilmData[i].schedules[0].performances,
+            description: mockFilmData[i].descriptions[0].description
+          }),
+          (trimmedMockData4[i] = {
+            name: mockFilmData[i].name,
+            times: mockFilmData[i].schedules[0].performances,
+            description: mockFilmData[i].descriptions[0].description
+          }),
+          (trimmedMockData5[i] = {
+            name: mockFilmData[i].name,
+            times: mockFilmData[i].schedules[0].performances,
+            description: mockFilmData[i].descriptions[0].description
+          }),
+          (trimmedMockData6[i] = {
+            name: mockFilmData[i].name,
+            times: mockFilmData[i].schedules[0].performances,
+            description: mockFilmData[i].descriptions[0].description
+          });
+      }
     }
 
     // this function returns the films by day of the week. In the original data,
@@ -276,136 +276,21 @@ app.get("/filmtimesapp", function(req, res, next) {
     let longDate5 = new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000);
     let longDate6 = new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000);
 
-    let day0 = factoryTrim(trimmedMockData0, longDate0);
-    let day1 = factoryTrim(trimmedMockData1, longDate1);
-    let day2 = factoryTrim(trimmedMockData2, longDate2);
-    let day3 = factoryTrim(trimmedMockData3, longDate3);
-    let day4 = factoryTrim(trimmedMockData4, longDate4);
-    let day5 = factoryTrim(trimmedMockData5, longDate5);
-    let day6 = factoryTrim(trimmedMockData6, longDate6);
+    if (mockFilmData.length > 0 && mockFilmData !== undefined) {
+      let day0 = factoryTrim(trimmedMockData0, longDate0);
+      let day1 = factoryTrim(trimmedMockData1, longDate1);
+      let day2 = factoryTrim(trimmedMockData2, longDate2);
+      let day3 = factoryTrim(trimmedMockData3, longDate3);
+      let day4 = factoryTrim(trimmedMockData4, longDate4);
+      let day5 = factoryTrim(trimmedMockData5, longDate5);
+      let day6 = factoryTrim(trimmedMockData6, longDate6);
 
-    /*
-    let g = [day0, day1, day2, day3, day4, day5, day6];
-
-    console.log(g[0][0].times[0].ts);
-    console.log(g[1][0].times[0].ts);
-    console.log(g[2][0].times[0].ts);
-    console.log(g[3][0].times[0].ts);
-    console.log(g[4][0].times[0].ts);
-    console.log(g[5][0].times[0].ts);
-    console.log(g[6][0].times[0].ts);
-    */
-    // An array storing all of the film data to be sent to the front end
-    let collatedFilmsByDay = [day0, day1, day2, day3, day4, day5, day6];
-    return callback(collatedFilmsByDay);
+      // An array storing all of the film data to be sent to the front end
+      let collatedFilmsByDay = [day0, day1, day2, day3, day4, day5, day6];
+      return callback(collatedFilmsByDay);
+    }
   });
   function callback(data) {
     res.send(data);
-    /*
-    console.log(data[0][0].times[0].ts);
-    console.log(data[1][0].times[0].ts);
-    console.log(data[2][0].times[0].ts);
-    console.log(data[3][0].times[0].ts);
-    console.log(data[4][0].times[0].ts);
-    console.log(data[5][0].times[0].ts);
-    console.log(data[6][0].times[0].ts);
-    */
   }
 });
-
-/*
-const mockFilmData = require("./film-times.json");
-
-// The film data was being unexpectedly mutated by the later functions that filter the
-// film perfomances by date. I therefore created separate copies of the film data
-let trimmedMockData0 = [];
-let trimmedMockData1 = [];
-let trimmedMockData2 = [];
-let trimmedMockData3 = [];
-let trimmedMockData4 = [];
-let trimmedMockData5 = [];
-let trimmedMockData6 = [];
-
-// This creates an object trimming the unnecessary film data and leaving just the name
-// and the performances. I felt this was necessary as the original data is large and has
-// many nested properties
-for (let i = 0; i < mockFilmData.length; i++) {
-  (trimmedMockData0[i] = {
-    name: mockFilmData[i].name,
-    times: mockFilmData[i].schedules[0].performances
-  }),
-    (trimmedMockData1[i] = {
-      name: mockFilmData[i].name,
-      times: mockFilmData[i].schedules[0].performances
-    }),
-    (trimmedMockData2[i] = {
-      name: mockFilmData[i].name,
-      times: mockFilmData[i].schedules[0].performances
-    }),
-    (trimmedMockData3[i] = {
-      name: mockFilmData[i].name,
-      times: mockFilmData[i].schedules[0].performances
-    }),
-    (trimmedMockData4[i] = {
-      name: mockFilmData[i].name,
-      times: mockFilmData[i].schedules[0].performances
-    }),
-    (trimmedMockData5[i] = {
-      name: mockFilmData[i].name,
-      times: mockFilmData[i].schedules[0].performances
-    }),
-    (trimmedMockData6[i] = {
-      name: mockFilmData[i].name,
-      times: mockFilmData[i].schedules[0].performances
-    });
-}
-
-// this function filters returns the films by day of the week. In the original data,
-// each film is an object, and all of the week's perfomances of that film are stored in
-// an array of objects
-function factoryTrim(filmTimes, screeningDay) {
-  let formattedDate = screeningDay.toISOString().slice(0, 10);
-
-  // only include performances that match the relevant date (above)
-  let filteredPerformances = filmTimes.map(function(CompareWithDate) {
-    CompareWithDate.times = CompareWithDate.times.filter(
-      x => x.ts.slice(0, 10) == formattedDate
-    );
-    return CompareWithDate;
-  });
-
-  // filters out films without any performances on the relevant date
-  let filmsByDay = filteredPerformances.filter(obj => obj.times.length > 0);
-
-  return filmsByDay;
-}
-
-// This gives the seven days of the week, which the function above trims to YYYY-MM-DD
-// The function above uses these dates to filter out which film performances are needed
-let longDate0 = new Date(new Date().getTime());
-let longDate1 = new Date(new Date().getTime() + 1 * 24 * 60 * 60 * 1000);
-let longDate2 = new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000);
-let longDate3 = new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000);
-let longDate4 = new Date(new Date().getTime() + 4 * 24 * 60 * 60 * 1000);
-let longDate5 = new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000);
-let longDate6 = new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000);
-
-let day0 = factoryTrim(trimmedMockData0, longDate0);
-let day1 = factoryTrim(trimmedMockData1, longDate1);
-let day2 = factoryTrim(trimmedMockData2, longDate2);
-let day3 = factoryTrim(trimmedMockData3, longDate3);
-let day4 = factoryTrim(trimmedMockData4, longDate4);
-let day5 = factoryTrim(trimmedMockData5, longDate5);
-let day6 = factoryTrim(trimmedMockData6, longDate6);
-
-// An array storing all of the film data to be sent to the front end
-let g = [day0, day1, day2, day3, day4, day5, day6];
-
-console.log(g[0][0].times[0].ts);
-console.log(g[1][0].times[0].ts);
-console.log(g[2][0].times[0].ts);
-console.log(g[3][0].times[0].ts);
-console.log(g[4][0].times[0].ts);
-console.log(g[5][0].times[0].ts);
-console.log(g[6][0].times[0].ts);
-*/
