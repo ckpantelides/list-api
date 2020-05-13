@@ -28,19 +28,19 @@ router.get('/', function (req, res, next) {
         return e.tags.includes('film');
       });
     }
-    let filmData = filmTimes.concat(body);
+    filmTimes = filmTimes.concat(body);
 
     // This creates an array trimming the unnecessary film data, leaving just the name
     // performances and description. I felt this was necessary as the original data array is
     // complex and has many nested properties
     let trimmedData = [];
 
-    if (filmData.length > 0 && filmData !== undefined) {
-      for (let i = 0; i < filmData.length; i++) {
+    if (filmTimes.length > 0 && filmTimes !== undefined) {
+      for (let i = 0; i < filmTimes.length; i++) {
         trimmedData[i] = {
-          name: filmData[i].name,
-          times: filmData[i].schedules[0].performances,
-          description: filmData[i].descriptions[0].description,
+          name: filmTimes[i].name,
+          times: filmTimes[i].schedules[0].performances,
+          description: filmTimes[i].descriptions[0].description,
         };
       }
     }
@@ -77,7 +77,7 @@ router.get('/', function (req, res, next) {
     let longDate5 = new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000);
     let longDate6 = new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000);
 
-    if (filmData.length > 0 && filmData !== undefined) {
+    if (filmTimes.length > 0 && filmTimes !== undefined) {
       // The spread operator is used to clone the trimmedData, so it's not mutated by each function call
       let day0 = trimByDay([...trimmedData], longDate0);
       let day1 = trimByDay([...trimmedData], longDate1);
