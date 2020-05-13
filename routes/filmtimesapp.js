@@ -48,11 +48,11 @@ router.get('/', function (req, res, next) {
     // this function returns the films by day of the week. In the original data,
     // each film is an object, and all of the week's perfomances of that film are stored in
     // an array of objects
-    function trimByDay(filmTimes, screeningDay) {
+    function trimByDay(allFilmTimes, screeningDay) {
       let formattedDate = screeningDay.toISOString().slice(0, 10);
 
       // only include performances that match the relevant date (above)
-      let filteredPerformances = filmTimes.map(function (CompareWithDate) {
+      let filteredPerformances = allFilmTimes.map(function (CompareWithDate) {
         CompareWithDate.times = CompareWithDate.times.filter(
           (x) => x.ts.slice(0, 10) == formattedDate
         );
@@ -79,13 +79,13 @@ router.get('/', function (req, res, next) {
 
     if (filmTimes.length > 0 && filmTimes !== undefined) {
       // The spread operator is used to clone the trimmedData, so it's not mutated by each function call
-      let day0 = trimByDay([...trimmedData], longDate0);
-      let day1 = trimByDay([...trimmedData], longDate1);
-      let day2 = trimByDay([...trimmedData], longDate2);
-      let day3 = trimByDay([...trimmedData], longDate3);
-      let day4 = trimByDay([...trimmedData], longDate4);
-      let day5 = trimByDay([...trimmedData], longDate5);
-      let day6 = trimByDay([...trimmedData], longDate6);
+      let day0 = trimByDay(...trimmedData, longDate0);
+      let day1 = trimByDay(...trimmedData, longDate1);
+      let day2 = trimByDay(...trimmedData, longDate2);
+      let day3 = trimByDay(...trimmedData, longDate3);
+      let day4 = trimByDay(...trimmedData, longDate4);
+      let day5 = trimByDay(...trimmedData, longDate5);
+      let day6 = trimByDay(...trimmedData, longDate6);
 
       // An array storing all of the film data to be sent to the front end
       let collatedFilmsByDay = [day0, day1, day2, day3, day4, day5, day6];
