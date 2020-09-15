@@ -40,12 +40,16 @@ router.get('/', function (req, res, next) {
       // can't be used as a deep copy is needed
       let clonedData = [];
       for (let i = 0; i < allFilmTimes.length; i++) {
+        // Sets a default value for the film descriptions
+        let filmDescription =
+          allFilmTimes[i].descriptions[0].description == undefined
+            ? 'Summary not available'
+            : allFilmTimes[i].descriptions[0].description;
+
         clonedData[i] = {
           name: allFilmTimes[i].name,
           times: allFilmTimes[i].schedules[0].performances,
-          description:
-            allFilmTimes[i].descriptions[0].description ||
-            'Summary not available',
+          description: filmDescription,
         };
       }
       // Returns the date in YYYY-MM-DD format
