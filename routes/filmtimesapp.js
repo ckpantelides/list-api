@@ -43,7 +43,9 @@ router.get('/', function (req, res, next) {
         clonedData[i] = {
           name: allFilmTimes[i].name,
           times: allFilmTimes[i].schedules[0].performances,
-          description: allFilmTimes[i].descriptions[0].description,
+          description:
+            allFilmTimes[i].descriptions[0].description ||
+            'Summary not available',
         };
       }
       // Returns the date in YYYY-MM-DD format
