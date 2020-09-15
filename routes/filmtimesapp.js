@@ -42,7 +42,7 @@ router.get('/', function (req, res, next) {
       for (let i = 0; i < allFilmTimes.length; i++) {
         // Sets a default value for the film descriptions
         let filmDescription =
-          allFilmTimes[i].descriptions[0].description == undefined
+          allFilmTimes[i].descriptions[0] == undefined
             ? 'Summary not available'
             : allFilmTimes[i].descriptions[0].description;
 
